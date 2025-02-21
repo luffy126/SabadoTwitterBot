@@ -95,6 +95,7 @@ def cycle(opcion):
     send_tweet(opcion)
     time.sleep(10)
     retweet()
+    time.sleep(40)
 
 # Restringir el ciclo a los sábados a las 21:30
 schedule.every().saturday.at("21:30").do(cycle)
