@@ -1,6 +1,6 @@
 # SabadoTwitterBot
 
-Hola buenas! En este documento se explicará como funciona este bot de Twitter que quita un retweet, publica un citado y vuelve a retweetear un tweet específico en una fecha y hora determinada.
+Hola buenas! En este documento se explicará como funciona este [bot de Twitter](https://x.com/SaluFachoSabado) que quita un retweet, publica un citado y vuelve a retweetear un tweet específico en una fecha y hora determinada.
 
 ## Requerimientos y Plataforma
 Primero que nada se necesita una cuenta de desarrollador en Twitter y tus respectivas claves de api. No voy a desarrollar esto porque es medio extenso, pero la documentación y pasos a seguir se puede encontrar [acá](https://developer.x.com/en) 
