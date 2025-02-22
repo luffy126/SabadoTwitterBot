@@ -1,6 +1,5 @@
 import tweepy
 import time
-import schedule
 from datetime import datetime
 import pytz
 
@@ -97,8 +96,6 @@ def cycle(opcion):
     retweet()
     time.sleep(40)
 
-# Restringir el ciclo a los sábados a las 21:30
-schedule.every().saturday.at("21:30").do(cycle)
 tz = pytz.timezone("America/Santiago")
 
 # Opción para el texto, se actualiza cada vez que se ejecuta el ciclo
@@ -107,14 +104,14 @@ opcion = 0
 # Loop principal
 while True: 
     now = datetime.now(tz).strftime("%H:%M")
+    daynow = datetime.now(tz).strftime("%A")
 
     # Si es sábado y son las 21:30, ejecutar el ciclo
-    if now == "21:30":
+    if now == "21:30" and daynow == "Saturday":
         if opcion < 6:
             opcion += 1
         elif opcion == 6:
             opcion = 0
-
         cycle(opcion)
 
     # Si no, esperar (muestra la fecha y hora actual en consola)
